@@ -16,7 +16,7 @@ export function Note({ onDelete }: NoteProps) {
             <Col>
                 <h1>{note.title}</h1>
                 {note.tags.length > 0 && (
-                    <Stack gap={1} className='flex-wrap'>
+                    <Stack gap={1} className='flex-wrap' direction="horizontal">
                         {note.tags.map(tag => (
                             <Badge className='text-truncate' key={tag.id}>{tag.label}</Badge>
                         ))}
